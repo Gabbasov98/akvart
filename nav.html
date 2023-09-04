@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="Акварт" />
+    <meta property="og:description" content="Интернет-магазин сантехники" />
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Главная</title>
+</head>
+
+
+
+<style>
+    .wrapper a {
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+
+    .wrapper button {
+        margin-bottom: 25px;
+        width: 300px;
+        height: 45px;
+    }
+</style>
+
+<body class="m-page">
+
+    <div class="wrapper" style="padding: 50px;">
+        <a href="index.html" style="display: block; margin-bottom: 20px;">
+            Главная
+        </a>
+        <a href="catalog.html" style="display: block; margin-bottom: 20px;">
+            02. Category
+        </a>
+        <a href="catalog2.html" style="display: block; margin-bottom: 20px;">
+            02. Category - Filters
+        </a>
+        <a href="catalog-item.html" style="display: block; margin-bottom: 20px;">
+            03. Product Card
+        </a>
+        <a href="brands.html" style="display: block; margin-bottom: 20px;">
+            04. Brands
+        </a>
+        <a href="catalog3.html" style="display: block; margin-bottom: 20px;">
+            05. Brand's Page
+        </a>
+        <a href="compare.html" style="display: block; margin-bottom: 20px;">
+            06. Compare
+        </a>
+        <a href="favourite.html" style="display: block; margin-bottom: 20px;">
+            07. Favorites
+        </a>
+        <a href="delivery.html" style="display: block; margin-bottom: 20px;">
+            08. Delivery
+        </a>
+        <a href="payments.html" style="display: block; margin-bottom: 20px;">
+            09. Payments
+        </a>
+        <a href="guarantee.html" style="display: block; margin-bottom: 20px;">
+            10. Guarantee
+        </a>
+        <a href="cart.html" style="display: block; margin-bottom: 20px;">
+            11. Cart & Checkout
+        </a>
+        <a href="user-data.html" style="display: block; margin-bottom: 20px;">
+            12. Account - Personal data
+        </a>
+        <a href="history.html" style="display: block; margin-bottom: 20px;">
+            13. Account - Orders History
+        </a>
+
+
+
+
+        <button data-modal="regModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Регистрация
+        </button>
+        <button data-modal="loginModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Авторизация
+        </button>
+        <button data-modal="callModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            ЗАКАЗАТЬ ЗВОНОК
+        </button>
+        <button data-modal="questionModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            ЕСТЬ ВОПРОСЫ?
+        </button>
+        <button data-modal="productModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Быстрый просмотр
+        </button>
+
+    </div>
+
+
+    <!--  -->
+    <div class="modal" id="regModal">
+        <div class="modal__dialog">
+            <button class="_close-modal modal__close">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4" d="M12 1L1 12M1 1L12 12" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <div class="modal__top">
+                <div class="modal__title regular-text">
+                    Регистрация
+                </div>
+            </div>
+            <form class="auth-form">
+                <div class="auth-info">
+                    <div class="auth-info__wrap">
+                        <div class="text14">
+                            Уже есть аккаунт? <button data-modal="loginModal">Войти</button>
+                        </div>
+                    </div>
+                </div>
+                <fieldset class="fg fg-dynamic">
+                    <input type="text">
+                    <label>Ваше имя</label>
+                </fieldset>
+                <div class="auth-form__hint text14">
+                    Укажите ваш номер телефона и мы пришлем на него СМС с проверочным кодом
+                </div>
+                <fieldset class="fg fg-dynamic">
+                    <input type="tel">
+                    <label>Номер телефона</label>
+                </fieldset>
+                <div class="m-check">
+                    <input type="checkbox">
+                    <label><span>Привязан Whatsapp</span></label>
+                </div>
+                <div class="m-check">
+                    <input type="checkbox">
+                    <label><span>Привязан Telegram</span></label>
+                </div>
+                <button class="auth-form__btn m-btn m-btn-blue">
+                    <span>Получить код</span>
+                </button>
+            </form>
+        </div>
+        <div class="modal__bg _close-modal"></div>
+    </div>
+
+    <div class="modal" id="loginModal">
+        <div class="modal__dialog">
+            <button class="_close-modal modal__close">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4" d="M12 1L1 12M1 1L12 12" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <div class="modal__top">
+                <div class="modal__title regular-text">
+                    Авторизация
+                </div>
+            </div>
+            <form class="auth-form">
+                <div class="auth-info">
+                    <div class="auth-info__wrap">
+                        <div class="text14">
+                            Нет аккаунта? <button data-modal="regModal">Зарегистрироваться</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="auth-form__hint text14">
+                    Укажите ваш номер телефона и мы пришлем на него СМС с проверочным кодом
+                </div>
+                <fieldset class="fg fg-dynamic">
+                    <input type="tel">
+                    <label>Номер телефона</label>
+                </fieldset>
+                <button class="auth-form__btn m-btn m-btn-blue">
+                    <span>Получить код</span>
+                </button>
+            </form>
+        </div>
+        <div class="modal__bg _close-modal"></div>
+    </div>
+
+    <div class="modal" id="callModal">
+        <div class="modal__dialog">
+            <button class="_close-modal modal__close">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4" d="M12 1L1 12M1 1L12 12" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <div class="modal__top _center">
+                <div class="modal__title regular-text">
+                    ЗАКАЗАТЬ ЗВОНОК
+                </div>
+                <div class="modal__desc text14">
+                    Перезвоним: Пн-Вс с 8:00 до 20:00
+                </div>
+            </div>
+            <form class="auth-form">
+                <fieldset class="fg fg-dynamic">
+                    <input type="text">
+                    <label>Ваше имя</label>
+                </fieldset>
+                <fieldset class="fg fg-dynamic">
+                    <input type="tel">
+                    <label>Номер телефона</label>
+                </fieldset>
+                <fieldset class="fg fg-dynamic">
+                    <input type="text">
+                    <label>Удобное время для звонка</label>
+                </fieldset>
+                <fieldset class="fg fg-dynamic">
+                    <textarea></textarea>
+                    <label>Комментарий</label>
+                </fieldset>
+                <div class="auth-form__hint text13 _center">
+                    Оставляя заявку у нас на сайте на обратный звонок, вы подтверждаете свое согласие с <a href="">политикой конфиденциальности</a>.
+                </div>
+                <button class="auth-form__btn m-btn m-btn-blue">
+                    <span>Заказать звонок</span>
+                </button>
+            </form>
+        </div>
+        <div class="modal__bg _close-modal"></div>
+    </div>
+
+    <div class="modal" id="questionModal">
+        <div class="modal__dialog">
+            <button class="_close-modal modal__close">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4" d="M12 1L1 12M1 1L12 12" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <div class="modal__top _center">
+                <div class="modal__title regular-text">
+                    ЕСТЬ ВОПРОСЫ?
+                </div>
+            </div>
+
+            <div class="qa-info">
+                <div class="qa-info__contacts">
+                    <div class="qa-info__phone">
+                        <div class="text13">
+                            Звоните
+                        </div>
+                        <a href="tel:88007758771" class="text22 medium-text">
+                            8 800 775 87 71
+                        </a>
+                    </div>
+                    <div class="qa-info__time">
+                        <div class="text13">
+                            Ежедневно <br>
+                        с 8:00 до 20:00
+                        </div>
+                    </div>
+                </div>
+                <button class="qa-info__btn m-btn m-btn-orange-outline">
+                    <span>Заказать звонок</span>
+                </button>
+                <div class="qa-info__text-us">
+                    <div class="text16">
+                        Пишите нам
+                    </div>
+                    <button class="qa-info__btn m-btn m-btn-blue-outline">
+                        <span>Задать вопрос</span>
+                    </button>
+                </div>
+                <div class="qa-info__socials">
+                    <div class="text16">
+                        Другие способы связи:
+                    </div>
+                    <div class="socials">
+                        <a href="" class="socials__item">
+                            <img src="img/tg.svg" alt="">
+                            <span>Telegram</span>
+                        </a>
+                        <a href="" class="socials__item">
+                            <img src="img/whatsapp.svg" alt="">
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="qa-info__reference">
+                    <div class="text16">
+                        Справочная информация на сайте:
+                    </div>
+                    <div class="qa-info__links">
+                        <a href="" class="qa-info__link">
+                            <span>Доставка</span>
+                        </a>
+                        <a href="" class="qa-info__link">
+                            <span>Оплата</span>
+                        </a>
+                        <a href="" class="qa-info__link">
+                            <span>Часто задаваемые вопросы</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal__bg _close-modal"></div>
+    </div>
+
+
+    <div class="modal city-modal" id="cityModal">
+        <div class="modal__dialog">
+            <button class="_close-modal modal__close">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4" d="M12 1L1 12M1 1L12 12" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <div class="modal__top">
+                <div class="modal__title regular-text">
+                    Выберите свой город
+                </div>
+            </div>
+            <div class="city-modal__content">
+                <div class="city-modal__items">
+                    <div class="city-modal__item" data-city="Москва"><span>Москва</span></div>
+                    <div class="city-modal__item" data-city="Санкт-Петербург"><span>Санкт-Петербург</span></div>
+                    <div class="city-modal__item" data-city="Владимир"><span>Владимир</span></div>
+                    <div class="city-modal__item" data-city="Волгоград"><span>Волгоград</span></div>
+                    <div class="city-modal__item" data-city="Воронеж"><span>Воронеж</span></div>
+                    <div class="city-modal__item" data-city="Екатеринбург"><span>Екатеринбург</span></div>
+                    <div class="city-modal__item" data-city="Иваново"><span>Иваново</span></div>
+                    <div class="city-modal__item" data-city="Казань"><span>Казань</span></div>
+                    <div class="city-modal__item" data-city="Калуга"><span>Калуга</span></div>
+                    <div class="city-modal__item" data-city="Кострома"><span>Кострома</span></div>
+                    <div class="city-modal__item" data-city="Краснодар"><span>Краснодар</span></div>
+                    <div class="city-modal__item" data-city="Набережные Челны"><span>Набережные Челны</span></div>
+                    <div class="city-modal__item" data-city="Нижний Новгород"><span>Нижний Новгород</span></div>
+                    <div class="city-modal__item" data-city="Пенза"><span>Пенза</span></div>
+                    <div class="city-modal__item" data-city="Пермь"><span>Пермь</span></div>
+                    <div class="city-modal__item" data-city="Ростов-на-Дону"><span>Ростов-на-Дону</span></div>
+                    <div class="city-modal__item" data-city="Рязань"><span>Рязань</span></div>
+                    <div class="city-modal__item" data-city="Самара"><span>Самара</span></div>
+                    <div class="city-modal__item" data-city="Саратов"><span>Саратов</span></div>
+                    <div class="city-modal__item" data-city="Сочи"><span>Сочи</span></div>
+                    <div class="city-modal__item" data-city="Тула"><span>Тула</span></div>
+                    <div class="city-modal__item" data-city="Тюмень"><span>Тюмень</span></div>
+                    <div class="city-modal__item" data-city="Уфа"><span>Уфа</span></div>
+                    <div class="city-modal__item" data-city="Челябинск"><span>Челябинск</span></div>
+                    <div class="city-modal__item" data-city="Ярославль"><span>Ярославль</span></div>
+                </div>
+
+                <div class="city-form">
+                    <div class="city-form__title text22 regular-text">
+                        Или укажите в поле:
+                    </div>
+                    <div class="city-form__grid">
+                        <fieldset class="fg">
+                            <input type="text" placeholder="Начните вводить город">
+                        </fieldset>
+                        <button class="city-form__btn m-btn m-btn-blue-outline">
+                            <span>Выбрать</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal__bg _close-modal"></div>
+    </div>
+
+    <div class="modal product-modal" id="productModal">
+        <div class="modal__dialog">
+            <button class="_close-modal modal__close">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4" d="M12 1L1 12M1 1L12 12" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <div class="product-modal__grid">
+                <div class="product-modal__col">
+                    <div class="gallery">
+                        <div class="gallery__big swiper mySwiper2">
+                            <div class="swiper-wrapper gallery-group">
+                                <div class="swiper-slide">
+                                    <a href="img/gallery.webp" class="gallery__img" data-fancybox="gallery2">
+                                        <img src="img/gallery.webp" />
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/gallery2.webp" class="gallery__img" data-fancybox="gallery2">
+                                        <img src="img/gallery2.webp" />
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/gallery3.webp" class="gallery__img" data-fancybox="gallery2">
+                                        <img src="img/gallery3.webp" />
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/gallery4.webp" class="gallery__img" data-fancybox="gallery2">
+                                        <img src="img/gallery4.webp" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-nav">
+                                <div class="swiper-button swiper-button-prev">
+                                    <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.292893 8.70711C-0.097631 8.31658 -0.097631 7.68342 0.292893 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41421 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292893 8.70711ZM2 9H1V7H2V9Z" fill="#6A6E71" />
+                                    </svg>
+                                </div>
+                                <div class="swiper-button swiper-button-next">
+                                    <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.70711 8.70711C9.09763 8.31658 9.09763 7.68342 8.70711 7.29289L2.34315 0.928932C1.95262 0.538408 1.31946 0.538408 0.928932 0.928932C0.538408 1.31946 0.538408 1.95262 0.928932 2.34315L6.58579 8L0.928932 13.6569C0.538408 14.0474 0.538408 14.6805 0.928932 15.0711C1.31946 15.4616 1.95262 15.4616 2.34315 15.0711L8.70711 8.70711ZM7 9H8V7H7V9Z" fill="#6A6E71" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="zoom">
+                                <img src="img/zoom.svg" alt="">
+                            </div>
+                        </div>
+                        <div thumbsSlider="" class="gallery__small swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="gallery__img">
+                                        <img src="img/gallery.webp" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="gallery__img">
+                                        <img src="img/gallery2.webp" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="gallery__img">
+                                        <img src="img/gallery3.webp" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="gallery__img">
+                                        <img src="img/gallery4.webp" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="product-modal__col">
+                    <div class="product-modal__title text24 regular-text">
+                        Комплект Акриловая ванна Am.Pm Gem 150 x 70 см, W90ASET-150W90BS80CT
+                    </div>
+                    <div class="catalog-item__top">
+                        <div class="brand-info">
+                            <div class="brand-card">
+                                <img src="img/brand4.svg" alt="">
+                            </div>
+                            <div class="brand-info__items">
+                                <div class="brand-info__item">
+                                    Бренд: <a href="">Am.Pm</a>
+                                </div>
+                                <div class="brand-info__item">
+                                    Коллекция: <a href="">Cleopatra</a>
+                                </div>
+                                <div class="brand-info__item">
+                                    Код: <span>389539</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-review">
+                            <div class="rating">
+                                <div class="rating-input rating-input--read-only" data-total-rating="4" data-rating-code="1">
+                                    <div class="rating-input__item" data-rating-value="5">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 1.7211L8.48588 5.03174L8.60327 5.29329L8.88829 5.32411L12.4961 5.71422L9.80662 8.15042L9.59414 8.34289L9.65291 8.62348L10.3968 12.1752L7.2487 10.3702L7 10.2276L6.7513 10.3702L3.60325 12.1752L4.34709 8.62348L4.40586 8.34289L4.19338 8.15042L1.50394 5.71422L5.11171 5.32411L5.39673 5.29329L5.51412 5.03174L7 1.7211Z" stroke="#EE9630" />
+                                        </svg>
+                                    </div>
+                                    <div class="rating-input__item" data-rating-value="4">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 1.7211L8.48588 5.03174L8.60327 5.29329L8.88829 5.32411L12.4961 5.71422L9.80662 8.15042L9.59414 8.34289L9.65291 8.62348L10.3968 12.1752L7.2487 10.3702L7 10.2276L6.7513 10.3702L3.60325 12.1752L4.34709 8.62348L4.40586 8.34289L4.19338 8.15042L1.50394 5.71422L5.11171 5.32411L5.39673 5.29329L5.51412 5.03174L7 1.7211Z" stroke="#EE9630" />
+                                        </svg>
+                                    </div>
+                                    <div class="rating-input__item" data-rating-value="3">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 1.7211L8.48588 5.03174L8.60327 5.29329L8.88829 5.32411L12.4961 5.71422L9.80662 8.15042L9.59414 8.34289L9.65291 8.62348L10.3968 12.1752L7.2487 10.3702L7 10.2276L6.7513 10.3702L3.60325 12.1752L4.34709 8.62348L4.40586 8.34289L4.19338 8.15042L1.50394 5.71422L5.11171 5.32411L5.39673 5.29329L5.51412 5.03174L7 1.7211Z" stroke="#EE9630" />
+                                        </svg>
+                                    </div>
+                                    <div class="rating-input__item" data-rating-value="2">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 1.7211L8.48588 5.03174L8.60327 5.29329L8.88829 5.32411L12.4961 5.71422L9.80662 8.15042L9.59414 8.34289L9.65291 8.62348L10.3968 12.1752L7.2487 10.3702L7 10.2276L6.7513 10.3702L3.60325 12.1752L4.34709 8.62348L4.40586 8.34289L4.19338 8.15042L1.50394 5.71422L5.11171 5.32411L5.39673 5.29329L5.51412 5.03174L7 1.7211Z" stroke="#EE9630" />
+                                        </svg>
+                                    </div>
+                                    <div class="rating-input__item" data-rating-value="1">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 1.7211L8.48588 5.03174L8.60327 5.29329L8.88829 5.32411L12.4961 5.71422L9.80662 8.15042L9.59414 8.34289L9.65291 8.62348L10.3968 12.1752L7.2487 10.3702L7 10.2276L6.7513 10.3702L3.60325 12.1752L4.34709 8.62348L4.40586 8.34289L4.19338 8.15042L1.50394 5.71422L5.11171 5.32411L5.39673 5.29329L5.51412 5.03174L7 1.7211Z" stroke="#EE9630" />
+                                        </svg>
+                                    </div>
+                                    <input class="rating-input__field" type="number" value="0">
+                                </div>
+                            </div>
+                            <div class="product-card__feedback-count">
+                                <img src="img/comment.svg" alt="">
+                                <span class="text13">45 отзывов</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="props">
+                        <div class="props__items">
+
+                            <div class="prop-item">
+                                <div class="prop-item__title">Артикул</div>
+                                <div class="prop-item__desc">W90ASET-150W90BS80CT</div>
+                            </div>
+                            <div class="prop-item">
+                                <div class="prop-item__title">Изделие</div>
+                                <div class="prop-item__desc">ванна</div>
+                            </div>
+                            <div class="prop-item">
+                                <div class="prop-item__title">Типоразмер длина</div>
+                                <div class="prop-item__desc">150</div>
+                            </div>
+                            <div class="prop-item">
+                                <div class="prop-item__title">Типоразмер ширина</div>
+                                <div class="prop-item__desc">70</div>
+                            </div>
+                            <div class="prop-item">
+                                <div class="prop-item__title">Количество мест</div>
+                                <div class="prop-item__desc">2</div>
+                            </div>
+                            <div class="prop-item">
+                                <div class="prop-item__title">ДхШхВ (мм)</div>
+                                <div class="prop-item__desc">175х70х55</div>
+                            </div>
+                            <div class="prop-item">
+                                <div class="prop-item__title">Вес (кг)</div>
+                                <div class="prop-item__desc">55</div>
+                            </div>
+                            <div class="prop-item">
+                                <div class="prop-item__title">Толщина материала</div>
+                                <div class="prop-item__desc">7 мм</div>
+                            </div>
+                            <div class="prop-item">
+                                <div class="prop-item__title">Форма</div>
+                                <div class="prop-item__desc">прямоугольная</div>
+                            </div>
+                            <div class="prop-item">
+                                <div class="prop-item__title">На ножках</div>
+                                <div class="prop-item__desc">нет</div>
+                            </div>
+
+
+                            <div class="prop-item">
+                                <div class="prop-item__title">Слив-перелив в комплекте</div>
+                                <div class="prop-item__desc">нет</div>
+                            </div>
+                            <div class="prop-item">
+                                <div class="prop-item__title">Страна</div>
+                                <div class="prop-item__desc">Германия</div>
+                            </div>
+                            <div class="prop-item">
+                                <div class="prop-item__title">Угловое изделие</div>
+                                <div class="prop-item__desc">нет</div>
+                            </div>
+                            <div class="prop-item">
+                                <div class="prop-item__title">Гидромассаж</div>
+                                <div class="prop-item__desc">нет</div>
+                            </div>
+                            <div class="prop-item">
+                                <div class="prop-item__title">Гарантия</div>
+                                <div class="prop-item__desc">15 лет</div>
+                            </div>
+                            <div class="prop-item">
+                                <div class="prop-item__title">Глубина, см</div>
+                                <div class="prop-item__desc">40</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-cart">
+                <div class="product-cart__price">
+                    <div class="product-card__price2">
+                        53 190 ₽
+                    </div>
+                    <div class="product-card__prices-top">
+                        <div class="product-card__price1">
+                            55 750 ₽
+                        </div>
+                        <div class="product-card__sale">
+                            <span>-15%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-cart__nav2">
+                    <button class="product-cart__btn2 favourite-btn">
+                        <span class="favourite-btn__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18" viewBox="0 0 21 18" fill="none">
+                            <path d="M10.5 5C10.5 5 11.6594 1 15.3305 1C18.1902 1 20 3.29328 20 6.01008C20 9.76748 16.2296 12.2555 10.5 17C4.77041 12.2555 1 9.76748 1 6.01008C1 3.29328 2.80983 1 5.66949 1C9.34068 1 10.5 5 10.5 5Z" stroke="#424F60" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                        <span>Добавить в избранное</span>
+                    </button>
+                    <button class="product-cart__btn2 compare-btn">
+                        <span class="compare-btn__icon">
+                        <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 17V7" stroke="#424F60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 17V1" stroke="#424F60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 17V11" stroke="#424F60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                        <span>Сравнить</span>
+                    </button>
+                </div>
+                <div class="product-cart__nav">
+                    <button class="product-card__btn m-btn m-btn-blue">
+                        <img src="img/cart.svg" alt="">
+                        <span class="_view1">Купить</span>
+                        <span class="_view2">В корзине</span>
+                    </button>
+                    <button class="m-btn m-btn-blue-outline">
+                        <span>Подробнее о товаре</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal__bg _close-modal"></div>
+    </div>
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>
